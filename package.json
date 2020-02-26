@@ -4,10 +4,11 @@
   "description": "Addon to provide locale switcher and linguijs react for storybook",
   "main": "dist/index.js",
   "scripts": {
-    "build": "BABEL_ENV=production node ./scripts/build.js",
-    "prepublish": "npm run build",
-    "prestorybook": "npm run build",
-    "storybook": "start-storybook -p 9001"
+    "build": "npm-run-all --sequential clean tsc",
+    "clean": "del-cli ./dist",
+    "prepare": "npm run build",
+    "storybook": "start-storybook -p 9001",
+    "tsc": "tsc --build"
   },
   "repository": {
     "type": "git",
@@ -23,30 +24,28 @@
   "license": "MIT",
   "author": "Hichem benchaaben",
   "dependencies": {
+    "@lingui/core": "^2.8.3",
     "@lingui/react": "^2.8.3",
+    "@types/lingui__core": "2.7.0",
+    "@types/lingui__react": "2.8.1",
+    "@types/node": "13.7.6",
+    "@types/react": "16.9.23",
     "react": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
-    "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
     "@lingui/macro": "^2.8.3",
-    "@storybook/addons": "^5.0.11",
-    "@storybook/react": "^5.0.11",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-react": "^6.24.1",
-    "npm": "^6.9.0",
-    "shelljs": "^0.8.3",
-    "storybook": "^1.0.0"
+    "@storybook/addons": "^5.3.14",
+    "@storybook/channels": "^5.3.14",
+    "@storybook/react": "^5.3.14",
+    "del-cli": "3.0.0",
+    "npm-run-all": "4.1.5",
+    "storybook": "^1.0.0",
+    "typescript": "3.8.2"
   },
   "peerDependencies": {
+    "@lingui/react": ">=2.8.0",
     "@storybook/addons": ">= 3.2.16",
     "@storybook/react": ">= 3.2.16",
-    "react": ">= 15.4.0",
-    "@lingui/react": ">=2.8.0"
+    "react": ">= 15.4.0"
   }
 }
