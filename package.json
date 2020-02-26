@@ -1,13 +1,15 @@
 {
-  "name": "storybook-addon-linguijs",
-  "version": "1.0.10",
+  "name": "@yolkai/storybook-addon-linguijs",
+  "version": "0.0.0-development",
   "description": "Addon to provide locale switcher and linguijs react for storybook",
   "main": "dist/index.js",
   "scripts": {
     "build": "npm-run-all --sequential clean tsc",
     "clean": "del-cli ./dist",
     "prepare": "npm run build",
+    "semantic-release": "semantic-release",
     "storybook": "start-storybook -p 9001",
+    "test": "npm run build",
     "tsc": "tsc --build"
   },
   "repository": {
@@ -39,6 +41,7 @@
     "@storybook/react": "^5.3.14",
     "del-cli": "3.0.0",
     "npm-run-all": "4.1.5",
+    "semantic-release": "17.0.4",
     "storybook": "^1.0.0",
     "typescript": "3.8.2"
   },
