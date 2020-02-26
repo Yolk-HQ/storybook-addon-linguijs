@@ -8,13 +8,6 @@ import {
 
 import LocaleButton from "./LocaleButton";
 
-const panelStyle: CSSProperties = {
-  flexGrow: 0,
-  display: "flex",
-  alignSelf: "flex-start",
-  flexWrap: "wrap"
-};
-
 interface Config {
   locales: string[];
   defaultLocale: string;
@@ -50,14 +43,14 @@ const LocalePanel: React.FC<LocalePanelProps> = props => {
   };
 
   useEffect(() => {
+    props.channel.on(EVENT_SET_CONFIG_ID, setConfig);
+    props.channel.on(EVENT_GET_LOCALE_ID, getLocale);
+
     return () => {
       props.channel.removeListener(EVENT_SET_CONFIG_ID, setConfig);
       props.channel.removeListener(EVENT_GET_LOCALE_ID, getLocale);
     };
   }, []);
-
-  props.channel.on(EVENT_SET_CONFIG_ID, setConfig);
-  props.channel.on(EVENT_GET_LOCALE_ID, getLocale);
 
   const items = locales.map(locale => {
     return (
@@ -70,7 +63,7 @@ const LocalePanel: React.FC<LocalePanelProps> = props => {
     );
   });
 
-  return <div style={panelStyle}>{items}</div>;
+  return <div>{items}</div>;
 };
 
 export default LocalePanel;

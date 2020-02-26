@@ -2,10 +2,13 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "lib": ["DOM", "ES2018"],
+    "module": "CommonJS",
     "outDir": "./dist",
+    "sourceMap": true,
     "strict": true,
+    "target": "ES6",
     "types": ["node"]
   }
 }
