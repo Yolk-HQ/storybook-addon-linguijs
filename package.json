@@ -3,6 +3,9 @@
   "version": "0.0.0-development",
   "description": "Addon to provide locale switcher and linguijs react for storybook",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "npm-run-all --sequential clean tsc",
     "clean": "del-cli ./dist",
@@ -14,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HichemBenChaaben/storybook-addon-linguijs.git"
+    "url": "git+https://github.com/Yolk-HQ/storybook-addon-linguijs.git"
   },
   "keywords": [
     "storybook",
@@ -24,7 +27,10 @@
     "l10n"
   ],
   "license": "MIT",
-  "author": "Hichem benchaaben",
+  "authors": [
+    "Hichem benchaaben",
+    "Spencer Elliott <me@elliottsj.com>"
+  ],
   "dependencies": {
     "@lingui/core": "^2.8.3",
     "@lingui/react": "^2.8.3",
