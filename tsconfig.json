@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "lib": ["DOM", "ES2018"],
+    "outDir": "./dist",
+    "strict": true,
+    "types": ["node"]
+  }
+}

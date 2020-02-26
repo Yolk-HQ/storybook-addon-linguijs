@@ -1,4 +1,4 @@
-# Lingui react Addon
+# storybook-addons-linguijs
 
 The linguijs react addon can be used to provide locale switcher and linguijs react.
 
@@ -9,7 +9,7 @@ The linguijs react addon can be used to provide locale switcher and linguijs rea
 First, install the addon
 
 ```shell
-npm install -D storybook-addon-linguijs
+npm install -D @yolkai/storybook-addon-linguijs
 ```
 
 _Note: Following peer dependencies are required: `@storybook/addons`, `@storybook/react`, `react` and `lingui/react`._
@@ -17,7 +17,7 @@ _Note: Following peer dependencies are required: `@storybook/addons`, `@storyboo
 Add this line to your `addons.js` file (create this file inside your storybook config directory if needed).
 
 ```js
-import "storybook-addon-linguijs/register";
+import "@yolkai/storybook-addon-linguijs/register";
 ```
 
 In your `config.js` import the `setLinguiConfig` and `withLingui` function. Use `setLinguiConfig` to set the configuration
@@ -25,7 +25,7 @@ for `lingui/react` and `withLingui as decorator.
 
 ```js
 import { addDecorator, configure } from "@storybook/react";
-import { setLinguiConfig, withLingui } from "storybook-addon-linguijs";
+import { setLinguiConfig, withLingui } from "@yolkai/storybook-addon-linguijs";
 
 // Provide a catalog or import and use your existing one
 const catalogs = {
