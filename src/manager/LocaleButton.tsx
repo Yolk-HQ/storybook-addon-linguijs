@@ -10,10 +10,7 @@ const defaultStyle: CSSProperties = {
   background: "none",
   lineHeight: "30px",
   textAlign: "center",
-  textTransform: "uppercase",
-  transitionProperty: "background",
-  transitionDuration: "100ms",
-  transitionTimingFunction: "linear"
+  textTransform: "uppercase"
 };
 
 export const activeStyle: CSSProperties = {

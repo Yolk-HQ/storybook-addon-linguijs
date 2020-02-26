@@ -13,7 +13,8 @@
     "semantic-release": "semantic-release",
     "storybook": "start-storybook -p 9001",
     "test": "npm run build",
-    "tsc": "tsc --build"
+    "tsc": "tsc --build",
+    "tsc:watch": "tsc --build --watch"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "Hichem benchaaben",
     "Spencer Elliott <me@elliottsj.com>"
   ],
+  "browserslist": "> 0.25%, not dead, maintained node versions",
   "dependencies": {
     "@lingui/core": "^2.8.3",
     "@lingui/react": "^2.8.3",
@@ -41,14 +43,22 @@
     "react": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@storybook/addon-knobs": "5.3.14",
     "@lingui/macro": "^2.8.3",
     "@storybook/addons": "^5.3.14",
     "@storybook/channels": "^5.3.14",
     "@storybook/react": "^5.3.14",
+    "@types/lingui__macro": "^2.7.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.8.0",
     "del-cli": "3.0.0",
     "npm-run-all": "4.1.5",
     "semantic-release": "17.0.4",
-    "storybook": "^1.0.0",
     "typescript": "3.8.2"
   },
   "peerDependencies": {
